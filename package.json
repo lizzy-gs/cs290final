@@ -1,0 +1,33 @@
+{
+  "name": "cs290final",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "build": "node build.js",
+    "prestart": "npm run build",
+    "start": "node server.js",
+    "dev": "npm run watch-templates & npm run watch-server",
+    "watch-server": "nodemon server.js",
+    "watch-templates": "nodemon --watch views/templates -e handlebars --exec 'npm run build'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lizzy-gs/cs290final.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lizzy-gs/cs290final/issues"
+  },
+  "homepage": "https://github.com/lizzy-gs/cs290final#readme",
+  "dependencies": {
+    "express-file-routing": "^3.0.3",
+    "express-handlebars": "^8.0.1"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0",
+    "nodemon": "^3.1.7"
+  }
+}
