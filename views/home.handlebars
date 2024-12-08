@@ -1,2 +1,48 @@
-<h1>{{message}}</h1>
-<p>This is a basic handlebars example.</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <h1 id="title">Pomodoro Study Timer</h1>
+    <button id="settingsIcon">Settings</button>
+
+    <div id="timerBox">
+        <div id="selectTimer">
+            <button id="pomodoro" class="timerOption">Pomodoro</button>
+            <button id="shortBreak" class="timerOption">Short Break</button>
+            <button id="longBreak" class="timerOption">Long Break</button>
+        </div>
+        <h2 id="timer">10:00</h2>
+        <button id="startTimer">Start Timer</button>
+    </div>
+
+
+    <div id="settingsMenu" class="hidden">
+        <h2 id="settingsHeader">Settings</h2>
+        <button id="closeSettings">X</button>
+        <div id="customTimer">
+            <h3>Customize Timer Length</h3>
+            <label for="pomodoroLength">Pomodoro:</label>
+            <input type="number" id="pomodoroLength" placeholder="Enter minutes (whole number)" min="1" value="25"><br>
+            <label for="shortBreakLength">Short Break:</label>
+            <input type="number" id="shortBreakLength" placeholder="Enter minutes (whole number)" min="1" value="5"><br>
+            <label for="longBreakLength">Long Break:</label>
+            <input type="number" id="longBreakLength" placeholder="Enter minutes (whole number)" min="1" value="15"><br>
+            <p>Customized timer lengths may no longer follow Pomodoro method!</p>
+            <button id="save">Save</button>
+            <button id="reset">Reset to Defaults</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
