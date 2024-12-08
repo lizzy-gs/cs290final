@@ -1,15 +1,16 @@
-import { exec } from 'node:child_process';
-import { mkdir, glob } from 'node:fs/promises';
-import { promisify } from 'node:util';
-import { join, relative, dirname } from 'node:path';
+import { exec } from "node:child_process";
+import { glob } from "glob";
+import { mkdir } from "node:fs/promises";
+import { promisify } from "node:util";
+import { dirname, join } from "node:path";
 import process from "node:process";
 
 const execAsync = promisify(exec);
 
 // Configuration
 const config = {
-  sourceDir: 'views/partials',
-  outputDir: 'static/js/templates'
+  sourceDir: "views/partials",
+  outputDir: "static/js/templates",
 };
 
 async function compileTemplates() {
@@ -19,7 +20,9 @@ async function compileTemplates() {
 
     // Find all handlebars templates
     const templates = [];
-    for await (const path of glob('**/*.handlebars', { cwd: config.sourceDir })) {
+    const result = await glob("**/*.handlebars", { cwd: config.sourceDir });
+    console.log(result);
+    for (const path of result) {
       templates.push(path);
     }
 
@@ -28,7 +31,7 @@ async function compileTemplates() {
       const templatePath = join(config.sourceDir, relativePath);
       const outputPath = join(
         config.outputDir,
-        relativePath.replace('.handlebars', '.js')
+        relativePath.replace(".handlebars", ".js"),
       );
 
       // Create output directory for this template if needed
@@ -46,9 +49,9 @@ async function compileTemplates() {
       }
     }));
 
-    console.log('\nTemplate compilation complete!');
+    console.log("\nTemplate compilation complete!");
   } catch (error) {
-    console.error('Build failed:', error);
+    console.error("Build failed:", error);
     process.exit(1);
   }
 }
