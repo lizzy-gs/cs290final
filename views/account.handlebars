@@ -7,20 +7,17 @@
     <h1>Pomodoro Study Timer</h1>
     <div id="infoContainer">
         <h2>{{title}}</h2>
-        <form>
-            <label for="username">Username:</label><br>
-            <input type="text" id="username"><br>
-            <label for="password">Password:</label><br>
-            <input type="text" id="password"><br>
-        </form>
+        <form method="post">
+        <label for="username">Username:</label><br>
+		<input type="text" id="username" name="username"><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password"><br>
         <button id="submit">{{title}}</button>
         {{#if login}}
             <p>Don't have an account?</p>
-            <a href="">Sign up</a>
+            <a href="/register">Sign up</a>
         {{/if}}
+		</form>
     </div>
-    <form>
-
-    </form>
 </body>
 </html>

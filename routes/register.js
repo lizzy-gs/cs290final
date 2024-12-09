@@ -16,6 +16,6 @@ export const post = async (req, res) => {
   res.send("registered!");
 };
 
-export const get = () => {
-  res.send("template goes here");
+export const get = (req, res) => {
+  res.render("account", { title: "Register" });
 };

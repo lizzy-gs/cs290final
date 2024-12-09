@@ -66,7 +66,7 @@ export const loginUser = async (db, username, password) => {
 
     return { success: true, token };
   } catch (error) {
-    console.error("Error logging in:", error);
+    console.error("Error logging in: ", username, " ", error);
     throw error;
   }
 };

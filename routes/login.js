@@ -21,5 +21,5 @@ export const post = async (req, res) => {
 };
 
 export const get = (req, res) => {
-  res.send("template render here");
+  res.render("account", { title: "Log In", login: true });
 };
