@@ -4,22 +4,29 @@ let shortLength = 300;
 let longLength = 900;
 let totalStudied = 0;
 let creditsSpent = 0;
+let loggedIn = false;
 
-(async () => {
+fetch("/me").then((res) => {
+  if (!res.ok) throw new Error(`Response status: ${response.status}`);
+  return res;
+}).then((res) => res.json()).then((data) => {
   const {
     sec_studied,
     pomodoro_length,
     short_break_length,
     long_break_length,
     credits_spent,
-  } = await fetch("/me").then((res) => res.json());
+  } = data;
+  loggedIn = true;
   shortLength = short_break_length;
   longLength = long_break_length;
   pomodoroLength = pomodoro_length;
   totalStudied = sec_studied;
   creditsSpent = credits_spent;
   setTimer(pomodoroLength);
-})();
+}).catch(() => {
+  loggedIn = false;
+});
 
 function syncWithServer() {
   fetch("/save", {
@@ -133,9 +140,9 @@ function resetToDefaults() {
 }
 
 function setCredits() {
-  var credits = totalStudied / 60
-  credits = credits - creditsSpent
-  document.getElementById("credits").innerText = credits
+  var credits = totalStudied / 60;
+  credits = credits - creditsSpent;
+  document.getElementById("credits").innerText = credits;
 }
 
 setTimer(pomodoroLength);
