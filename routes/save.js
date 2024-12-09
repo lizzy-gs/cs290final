@@ -14,8 +14,8 @@ export const post = [mustLoggedIn, (req, res) => {
   update.run([
     req.body.totalStudied,
     req.body.pomodoroLength,
-    req.body.short_break_length,
-    req.body.long_break_length,
+    req.body.shortLength,
+    req.body.longLength,
     username,
   ]);
 

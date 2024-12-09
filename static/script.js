@@ -100,12 +100,12 @@ function saveTimerSettings() {
     headers: {
       "Content-Type": "application/json",
     },
-    body: {
+    body: JSON.stringify({
       pomodoroLength: pomodoroLength,
       shortLength: shortLength,
       longLength: longLength,
-      totalStudied: totalStudied
-    },
+      totalStudied: totalStudied,
+    }),
   });
 }
 
