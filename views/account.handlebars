@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pomodoro {{title}}</title>
+</head>
+<body>
+    <h1>Pomodoro Study Timer</h1>
+    <div id="infoContainer">
+        <h2>{{title}}</h2>
+        <form>
+            <label for="username">Username:</label><br>
+            <input type="text" id="username"><br>
+            <label for="password">Password:</label><br>
+            <input type="text" id="password"><br>
+        </form>
+        <button id="submit">{{title}}</button>
+        {{#if login}}
+            <p>Don't have an account?</p>
+            <a href="">Sign up</a>
+        {{/if}}
+    </div>
+    <form>
+
+    </form>
+</body>
+</html>
