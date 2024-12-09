@@ -1,10 +1,20 @@
 import express from "express";
 import { engine } from "express-handlebars";
 import { router } from "express-file-routing";
-import path from "node:path";
 import process from "node:process";
+import "dotenv/config"; // load our environment variables from `.env`
+import { attachDB, initDB } from "./db.js";
+import cookieParser from "cookie-parser";
 
 const app = express();
+
+// make it possible to access `req.db` for each request
+const db = initDB();
+app.use(attachDB(db));
+
+app.use(cookieParser());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 // setup file based router
 app.use("/", await router());
