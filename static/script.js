@@ -70,6 +70,7 @@ function setTimer(x) {
 function stopInterval() {
   clearInterval(interval);
   interval = null;
+  syncWithServer();
   document.getElementById("startTimer").innerText = "Start Timer";
 }
 
@@ -131,7 +132,14 @@ function resetToDefaults() {
   document.getElementById("longBreakLength").value = longLength / 60;
 }
 
+function setCredits() {
+  var credits = totalStudied / 60
+  credits = credits - creditsSpent
+  document.getElementById("credits").innerText = credits
+}
+
 setTimer(pomodoroLength);
+setCredits();
 
 let start = document.querySelector("#startTimer");
 let pomodoro = document.querySelector("#pomodoro");

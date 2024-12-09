@@ -2,10 +2,12 @@ body {
 
     margin: 0;
     padding: 0;
+    background-color: #f8f1f1;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: "Jua", sans-serif;
+    color: #4a4a4a;
+    font-family: "Patrick Hand SC", cursive;
     font-weight: 400;
     font-style: normal;
 }
@@ -23,9 +25,12 @@ ul {
 button {
 
     padding: 10px;
+    background-color: #ffc1c1;
+    border-style: none;
     border-radius: 5px;
-    border-width: 1px;
-    font-family: "Jua", sans-serif;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    color: #4a4a4a;
+    font-family: "Patrick Hand SC", cursive;
     font-weight: 400;
     font-style: normal;
     font-size: 18px;
@@ -34,12 +39,23 @@ button {
 button:hover {
 
     cursor: pointer;
-    background-color: lightgray;
+    background-color: #ffb6b9;
+    box-shadow: 0px 5px 10px rgba(255, 182, 185, 0.5);
+    transform: translateY(-1px);
+    transition: all 0.2s ease;
 }
 
 input {
 
     margin: 10px;
+    width: 30px;
+    border-style: none;
+    border-radius: 2px;
+    color: #4a4a4a;
+    font-family: "Patrick Hand SC", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
 }
 
 .hidden {
@@ -50,8 +66,9 @@ input {
 #title {
 
     margin: 0;
+    padding: 0;
     position: absolute;
-    top: 10px;
+    top: 2px;
     left: 10px;
     font-size: 40px;
 }
@@ -70,10 +87,10 @@ input {
     padding: 30px;
     text-align: center;
     background-color: white;
-    border-style: solid;
-    border-radius: 5px;
+    border-radius: 8px;
     border-width: 1px;
     border-color: black;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 #timer {
@@ -96,23 +113,25 @@ input {
     top: 20%;
     left: 50%;
     transform: translate(-50%);
-    background-color: gainsboro;
-    border: solid;
-    border-width: 1px;
+    background-color: #fcdada;
+    border-style: none;
     border-radius: 5px;
     text-align: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 #closeSettings {
 
-    margin: 0;
-    padding: 2px;
+    margin-top: 5px;
+    margin-right: 0px;
+    padding: 0px;
+    height: 30px;
+    width: 30px;
     position: absolute;
     top: 10px;
     right: 15px;
-    font-size: 25px;
+    font-size: 20px;
     border: none;
-    background-color: gainsboro;
 }
 
 #settingsHeader {
@@ -131,4 +150,11 @@ input {
 
     margin: 10px;
     padding: 5px;
+}
+
+#credits {
+
+    position: absolute;
+    top: 15px;
+    right: 110px;
 }

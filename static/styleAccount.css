@@ -2,17 +2,49 @@ body {
 
     margin: 0;
     padding: 0;
+    background-color: #f8f1f1;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: "Jua", sans-serif;
+    color: #4a4a4a;
+    font-family: "Patrick Hand SC", cursive;
     font-weight: 400;
     font-style: normal;
 }
 
 button {
-    font-family: "Jua", sans-serif;
+
+    padding: 10px;
+    background-color: #ffc1c1;
+    border-style: none;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    color: #4a4a4a;
+    font-family: "Patrick Hand SC", cursive;
     font-weight: 400;
     font-style: normal;
     font-size: 18px;
+}
+
+#title {
+
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 2px;
+    left: 10px;
+    font-size: 40px;
+}
+
+#infoContainer {
+
+    margin-top: 10%;
+}
+
+#submit {
+
+    height: 30px;
+    width: 65px;
+    margin-top: 15px;
+    padding: 0;
 }
