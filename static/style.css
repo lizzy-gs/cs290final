@@ -5,6 +5,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: "Jua", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 p {
@@ -22,6 +25,10 @@ button {
     padding: 10px;
     border-radius: 5px;
     border-width: 1px;
+    font-family: "Jua", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
 }
 
 button:hover {

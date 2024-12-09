@@ -17,5 +17,5 @@ export const post = async (req, res) => {
 };
 
 export const get = (req, res) => {
-  res.render("account", { title: "Register" });
+  res.render("account", { title: "Register", login: false });
 };
