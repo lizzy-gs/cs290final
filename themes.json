@@ -1,0 +1,24 @@
+{
+  "Default Pink": {
+    "name": "Default Pink",
+    "creditCost": 4,
+    "styles": {
+      "bg-color": "#f8f1f1",
+      "primary-color": "#ffc1c1",
+      "accent-color": "#ffb6b9",
+      "text-color": "#4a4a4a",
+      "hover-shadow": "rgba(255, 180, 185, 0.5)"
+    }
+  },
+  "Orange": {
+    "name": "Orange",
+    "creditCost": 1,
+    "styles": {
+      "bg-color": "#f8f1f1",
+      "primary-color": "#ffc1c1",
+      "accent-color": "#ffb6b9",
+      "text-color": "#4a4a4a",
+      "hover-shadow": "rgba(255, 180, 185, 0.5)"
+    }
+  }
+}

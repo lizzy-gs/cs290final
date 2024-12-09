@@ -7,7 +7,6 @@
 }
 
 body {
-
     margin: 0;
     padding: 0;
     background-color: var(--bg-color);
@@ -21,7 +20,6 @@ body {
 }
 
 p {
-
     margin: 5px;
     padding: 0;
 }
@@ -31,7 +29,6 @@ ul {
 }
 
 button {
-
     padding: 10px;
     background-color: var(--primary-color);
     border-style: none;
@@ -45,7 +42,6 @@ button {
 }
 
 button:hover {
-
     cursor: pointer;
     background-color: var(--accent-color);
     box-shadow: 0px 4px 6px rgba(255, 180, 185, 0.5);
@@ -54,7 +50,6 @@ button:hover {
 }
 
 input {
-
     margin: 10px;
     width: 40px;
     background-color: var(--bg-color);
@@ -69,7 +64,6 @@ input {
 }
 
 .hidden {
-
     display: none;
 }
 
@@ -80,7 +74,6 @@ input {
 }
 
 #title {
-
     margin: 0;
     padding: 0;
     position: absolute;
@@ -90,19 +83,17 @@ input {
 }
 
 .upperRightMenu {
-
     margin: 0;
     padding: 0;
     position: absolute;
     top: 10px;
     right: 10px;
-	display: flex;
-	flex-direction: column;
-	gap: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 #timerBox {
-
     margin-top: 12%;
     padding: 30px;
     text-align: center;
@@ -112,18 +103,15 @@ input {
 }
 
 #timer {
-
     font-size: 40px;
 }
 
 .timerOption {
-
     margin-left: 15px;
     margin-right: 15px;
 }
 
 #changeTheme {
-
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     row-gap: 30px;
@@ -133,20 +121,17 @@ input {
 }
 
 #settingsIcon {
-
     border-radius: 50%;
 }
 
 #shopIcon {
-
     border-radius: 50%;
 }
-
 
 #loginWarning {
     display: block;
     position: absolute;
-    bottom:  10px;
+    bottom: 10px;
     right: 10px;
     background: white;
     padding: 10px;
@@ -159,7 +144,6 @@ input {
 }
 
 #settingsMenu {
-
     padding: 15px;
     width: 50vw;
     height: 55vh;
@@ -175,7 +159,6 @@ input {
 }
 
 #closeSettings {
-
     margin-top: 5px;
     margin-right: 0px;
     padding: 0px;
@@ -189,19 +172,16 @@ input {
 }
 
 #settingsHeader {
-
     margin: 0;
     font-size: 30px;
 }
 
 #save {
-
     margin: 10px;
     padding: 5px;
 }
 
 #reset {
-
     margin: 10px;
     padding: 5px;
 }
@@ -222,7 +202,6 @@ input {
 }
 
 #closeShop {
-
     margin-top: 5px;
     margin-right: 0px;
     padding: 0px;
@@ -236,86 +215,70 @@ input {
 }
 
 #shopHeader {
-
     margin: 0;
     font-size: 30px;
 }
 
 .colorOption {
-
     width: 100%;
     height: 60px;
     padding: 5px;
 }
 
 .locked {
-
     width: 20px;
     height: 20px;
 }
 
 .cost {
-
     font-size: 10px;
     margin: 0px;
 }
 
 #red {
-
-    background-color: #ffc1c1
+    background-color: #ffc1c1;
 }
 
 #pink {
-
     background-color: #ff91c1;
 }
 
 #coral {
-    
     background-color: #ffc8a3;
 }
 
 #yellow {
-    
     background-color: #ffe8a3;
 }
 
 #green {
-
     background-color: #b1ffca;
 }
 
 #blue {
-
     background-color: #a3d9ff;
 }
 
 #purple {
-
     background-color: #d1a3ff;
 }
 
 #blackAndWhite {
-
     background-color: #d9d9d9;
 }
 
 #sunset {
-
     background: linear-gradient(to top, #f8b988, #eb8d88, #c26989, #695d8c);
 }
 
 #candy {
-
     background: linear-gradient(to top, #d9f1f3, #fcf0dc, #fbdee2, #feafab);
 }
 
 #space {
-
-    background: linear-gradient(to top, #A3FFD6, #7BC9FF, #8576FF, #1C1678);
+    background: linear-gradient(to top, #a3ffd6, #7bc9ff, #8576ff, #1c1678);
 }
 
 #tropical {
-
     background: linear-gradient(to top, #8ee2a7, #ffc94a, #ff6699, #5a3a2a);
 }

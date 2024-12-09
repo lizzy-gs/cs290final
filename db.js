@@ -12,7 +12,9 @@ function initDB() {
 	  credits_spent INTEGER,
 	  pomodoro_length INTEGER,
 	  short_break_length INTEGER,
-	  long_break_length INTEGER
+	  long_break_length INTEGER,
+	  todos TEXT,
+	  purchases TEXT
     )
   `);
 
