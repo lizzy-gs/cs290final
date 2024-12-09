@@ -20,7 +20,7 @@ app.set("view engine", "handlebars");
 app.set("views", "./views");
 
 // Static files
-app.use(express.static("public"));
+app.use(express.static("static"));
 
 const port = process.env.PORT || 3000;
 

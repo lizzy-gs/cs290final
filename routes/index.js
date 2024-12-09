@@ -1,3 +1,3 @@
 export default (req, res) => {
-  res.send("hello cs290!");
+  res.render("home");
 };
