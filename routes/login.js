@@ -14,9 +14,13 @@ export const post = async (req, res) => {
       maxAge: 24 * 60 * 60 * 1000, // 24 hours
     });
 
-    res.json({ success: true, username });
+    res.redirect(302, "/");
   } catch (error) {
-    res.status(400).json({ error: error.message });
+    res.render("account", {
+      title: "Log In",
+      login: true,
+      error: error.message,
+    });
   }
 };
 

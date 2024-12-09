@@ -1,7 +1,16 @@
 import process from "node:process";
 import { loginUser, registerUser } from "../auth.js";
 export const post = async (req, res) => {
-  await registerUser(req.db, req.body.username, req.body.password);
+  try {
+    await registerUser(req.db, req.body.username, req.body.password);
+  } catch (error) {
+    res.render("account", {
+      title: "Register",
+      login: false,
+      error: error.message,
+    });
+    return;
+  }
 
   const result = await loginUser(req.db, req.body.username, req.body.password);
 
