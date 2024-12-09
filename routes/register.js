@@ -4,6 +4,9 @@ export const post = async (req, res) => {
   try {
     await registerUser(req.db, req.body.username, req.body.password);
   } catch (error) {
+    if (error.message == "UNIQUE constraint failed: users.username") {
+      error.message = "Username already taken.";
+    }
     res.render("account", {
       title: "Register",
       login: false,
