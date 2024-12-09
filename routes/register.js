@@ -3,7 +3,7 @@ import { loginUser, registerUser } from "../auth.js";
 export const post = async (req, res) => {
   await registerUser(req.db, req.body.username, req.body.password);
 
-  const result = await loginUser(req.db, username, password);
+  const result = await loginUser(req.db, req.body.username, req.body.password);
 
   // Set secure cookie with JWT token
   res.cookie("session", result.token, {

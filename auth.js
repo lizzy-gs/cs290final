@@ -25,7 +25,7 @@ export const registerUser = async (db, username, password) => {
   try {
     const hashedPassword = await argon2.hash(password);
     const insert = db.prepare(
-      "INSERT INTO users (username, password, mins_studied, pomodoro_length, short_break_length, long_break_length) VALUES (?, ?, ?, ?, ?, ?)",
+      "INSERT INTO users (username, password, sec_studied, pomodoro_length, short_break_length, long_break_length) VALUES (?, ?, ?, ?, ?, ?)",
     )
       .run([
         username,

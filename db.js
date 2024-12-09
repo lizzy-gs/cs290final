@@ -8,7 +8,7 @@ function initDB() {
       id INTEGER PRIMARY KEY AUTOINCREMENT,
       username TEXT UNIQUE,
       password TEXT,
-	  mins_studied INTEGER,
+	  sec_studied INTEGER,
 	  pomodoro_length INTEGER,
 	  short_break_length INTEGER,
 	  long_break_length INTEGER
