@@ -3,6 +3,7 @@ let pomodoroLength = 1500;
 let shortLength = 300;
 let longLength = 900;
 let totalStudied = 0;
+let creditsSpent = 0;
 
 (async () => {
   const {
@@ -10,17 +11,36 @@ let totalStudied = 0;
     pomodoro_length,
     short_break_length,
     long_break_length,
+    credits_spent,
   } = await fetch("/me").then((res) => res.json());
   shortLength = short_break_length;
   longLength = long_break_length;
   pomodoroLength = pomodoro_length;
   totalStudied = sec_studied;
+  creditsSpent = credits_spent;
   setTimer(pomodoroLength);
 })();
+
+function syncWithServer() {
+  fetch("/save", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      pomodoroLength: pomodoroLength,
+      shortLength: shortLength,
+      longLength: longLength,
+      totalStudied: totalStudied,
+      creditsSpent: creditsSpent,
+    }),
+  });
+}
 
 function countdownTimer() {
   if (interval) {
     stopInterval();
+    syncWithServer();
   } else {
     document.getElementById("startTimer").innerText = "Pause Timer";
     interval = setInterval(() => {
@@ -31,7 +51,7 @@ function countdownTimer() {
       if (timeRemaining <= 0) {
         clearInterval(interval);
         document.getElementById("startTimer").innerText = "Start Timer";
-        console.log(timeRemaining);
+        syncWithServer();
         alert("Time's up!");
       }
     }, 1000);
@@ -95,18 +115,7 @@ function saveTimerSettings() {
   document.getElementById("longBreakLength").value = longLength / 60;
   modal.classList.toggle("hidden");
 
-  fetch("/save", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      pomodoroLength: pomodoroLength,
-      shortLength: shortLength,
-      longLength: longLength,
-      totalStudied: totalStudied,
-    }),
-  });
+  syncWithServer();
 }
 
 function resetToDefaults() {

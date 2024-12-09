@@ -9,6 +9,7 @@ function initDB() {
       username TEXT UNIQUE,
       password TEXT,
 	  sec_studied INTEGER,
+	  credits_spent INTEGER,
 	  pomodoro_length INTEGER,
 	  short_break_length INTEGER,
 	  long_break_length INTEGER

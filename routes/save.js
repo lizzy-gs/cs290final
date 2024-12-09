@@ -7,7 +7,8 @@ export const post = [mustLoggedIn, (req, res) => {
 		sec_studied = ?,
         pomodoro_length = ?,
         short_break_length = ?,
-        long_break_length = ?
+        long_break_length = ?,
+		credits_spent = ?
      WHERE
 		username = ?`);
 
@@ -16,6 +17,7 @@ export const post = [mustLoggedIn, (req, res) => {
     req.body.pomodoroLength,
     req.body.shortLength,
     req.body.longLength,
+    req.body.creditsSpent,
     username,
   ]);
 
