@@ -1,12 +1,20 @@
+:root {
+    --bg-color: #f8f1f1;
+    --primary-color: #ffc1c1;
+    --accent-color: #ffb6b9;
+    --text-color: #4a4a4a;
+    --hover-shadow: rgba(255, 180, 185, 0.5);
+}
+
 body {
 
     margin: 0;
     padding: 0;
-    background-color: #f8f1f1;
+    background-color: var(--bg-color);
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #4a4a4a;
+    color: var(--text-color);
     font-family: "Patrick Hand SC", cursive;
     font-weight: 400;
     font-style: normal;
@@ -25,11 +33,11 @@ ul {
 button {
 
     padding: 10px;
-    background-color: #ffc1c1;
+    background-color: var(--primary-color);
     border-style: none;
     border-radius: 8px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    color: #4a4a4a;
+    box-shadow: 0px 2px 5px var(--hover-shadow);
+    color: var(--text-color);
     font-family: "Patrick Hand SC", cursive;
     font-weight: 400;
     font-style: normal;
@@ -39,8 +47,8 @@ button {
 button:hover {
 
     cursor: pointer;
-    background-color: #ffb6b9;
-    box-shadow: 0px 5px 10px rgba(255, 182, 185, 0.5);
+    background-color: var(--accent-color);
+    box-shadow: 0px 4px 6px rgba(255, 180, 185, 0.5);
     transform: translateY(-1px);
     transition: all 0.2s ease;
 }
@@ -49,10 +57,10 @@ input {
 
     margin: 10px;
     width: 40px;
-    background-color: #f8f1f1;
+    background-color: var(--bg-color);
     border-style: none;
     border-radius: 2px;
-    color: #4a4a4a;
+    color: var(--text-color);
     font-family: "Patrick Hand SC", cursive;
     font-weight: 400;
     font-style: normal;
@@ -118,7 +126,10 @@ input {
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 10px;
+    row-gap: 30px;
+    column-gap: 50px;
+    justify-items: center;
+    align-items: center;
 }
 
 #settingsIcon {
@@ -182,7 +193,7 @@ input {
 #shop {
     padding: 15px;
     width: 50vw;
-    height: 55vh;
+    height: 60vh;
     position: absolute;
     top: 20%;
     left: 50%;
@@ -216,7 +227,7 @@ input {
 
 .colorOption {
 
-    width: 60px;
+    width: 100%;
     height: 60px;
     padding: 5px;
 }
@@ -231,4 +242,64 @@ input {
 
     font-size: 10px;
     margin: 0px;
+}
+
+#red {
+
+    background-color: #ffc1c1
+}
+
+#pink {
+
+    background-color: #ff91c1;
+}
+
+#coral {
+    
+    background-color: #ffc8a3;
+}
+
+#yellow {
+    
+    background-color: #ffe8a3;
+}
+
+#green {
+
+    background-color: #b1ffca;
+}
+
+#blue {
+
+    background-color: #a3d9ff;
+}
+
+#purple {
+
+    background-color: #d1a3ff;
+}
+
+#blackAndWhite {
+
+    background-color: #d9d9d9;
+}
+
+#sunset {
+
+    background: linear-gradient(to top, #f8b988, #eb8d88, #c26989, #695d8c);
+}
+
+#candy {
+
+    background: linear-gradient(to top, #d9f1f3, #fcf0dc, #fbdee2, #feafab);
+}
+
+#space {
+
+    background: linear-gradient(to top, #A3FFD6, #7BC9FF, #8576FF, #1C1678);
+}
+
+#tropical {
+
+    background: linear-gradient(to top, #8ee2a7, #ffc94a, #ff6699, #5a3a2a);
 }
