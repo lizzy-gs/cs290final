@@ -2,7 +2,7 @@ let interval = null;
 let pomodoroLength = 1500;
 let shortLength = 300;
 let longLength = 900;
-let total_studied = 0;
+let totalStudied = 0;
 
 (async () => {
   const {
@@ -14,7 +14,7 @@ let total_studied = 0;
   shortLength = short_break_length;
   longLength = long_break_length;
   pomodoroLength = pomodoro_length;
-  total_studied = sec_studied;
+  totalStudied = sec_studied;
   setTimer(pomodoroLength);
 })();
 
@@ -26,6 +26,7 @@ function countdownTimer() {
     interval = setInterval(() => {
       timeRemaining--;
       document.getElementById("timer").innerText = formatSeconds(timeRemaining);
+      totalStudied++;
 
       if (timeRemaining <= 0) {
         clearInterval(interval);
@@ -93,6 +94,19 @@ function saveTimerSettings() {
   document.getElementById("shortBreakLength").value = shortLength / 60;
   document.getElementById("longBreakLength").value = longLength / 60;
   modal.classList.toggle("hidden");
+
+  fetch("/save", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: {
+      pomodoroLength: pomodoroLength,
+      shortLength: shortLength,
+      longLength: longLength,
+      totalStudied: totalStudied
+    },
+  });
 }
 
 function resetToDefaults() {
