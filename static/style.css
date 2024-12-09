@@ -236,35 +236,35 @@ input {
 }
 
 #red {
-    background-color: #ffc1c1;
+    background: #ffc1c1;
 }
 
 #pink {
-    background-color: #ff91c1;
+    background: #ff91c1;
 }
 
 #coral {
-    background-color: #ffc8a3;
+    background: #ffc8a3;
 }
 
 #yellow {
-    background-color: #ffe8a3;
+    background: #ffe8a3;
 }
 
 #green {
-    background-color: #b1ffca;
+    background: #b1ffca;
 }
 
 #blue {
-    background-color: #a3d9ff;
+    background: #a3d9ff;
 }
 
 #purple {
-    background-color: #d1a3ff;
+    background: #d1a3ff;
 }
 
 #blackAndWhite {
-    background-color: #d9d9d9;
+    background: #d9d9d9;
 }
 
 #sunset {
