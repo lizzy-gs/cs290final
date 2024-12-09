@@ -27,7 +27,7 @@ button {
     padding: 10px;
     background-color: #ffc1c1;
     border-style: none;
-    border-radius: 5px;
+    border-radius: 8px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     color: #4a4a4a;
     font-family: "Patrick Hand SC", cursive;
@@ -66,8 +66,8 @@ input {
 }
 
 .icon {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     display: block;
 }
 
@@ -115,9 +115,20 @@ input {
 }
 
 #changeTheme {
+
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 20px;
+    gap: 10px;
+}
+
+#settingsIcon {
+
+    border-radius: 50%;
+}
+
+#shopIcon {
+
+    border-radius: 50%;
 }
 
 #settingsMenu {
@@ -201,4 +212,23 @@ input {
 
     margin: 0;
     font-size: 30px;
+}
+
+.colorOption {
+
+    width: 60px;
+    height: 60px;
+    padding: 5px;
+}
+
+.locked {
+
+    width: 20px;
+    height: 20px;
+}
+
+.cost {
+
+    font-size: 10px;
+    margin: 0px;
 }
