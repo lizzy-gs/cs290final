@@ -25,6 +25,7 @@ fetch("/me").then((res) => {
   creditsSpent = credits_spent;
   setTimer(pomodoroLength);
 }).catch(() => {
+  loginWarning.style.display = "block";
   loggedIn = false;
 });
 
