@@ -146,7 +146,6 @@ function setCredits() {
 }
 
 setTimer(pomodoroLength);
-setCredits();
 
 let start = document.querySelector("#startTimer");
 let pomodoro = document.querySelector("#pomodoro");
@@ -181,3 +180,15 @@ let reset = document.querySelector("#reset");
 
 save.addEventListener("click", saveTimerSettings);
 reset.addEventListener("click", resetToDefaults);
+
+let shopIcon = document.querySelector("#shopIcon")
+let shopModal = document.querySelector("#shop")
+let closeShop = document.querySelector("#closeShop")
+
+shopIcon.addEventListener("click", () => {
+  shopModal.classList.toggle("hidden")
+})
+
+closeShop.addEventListener("click", () => {
+  shopModal.classList.toggle("hidden")
+})

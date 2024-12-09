@@ -18,9 +18,12 @@
 <body>
 
     <h1 id="title">Pomodoro Study Timer</h1>
-    <button id="settingsIcon">Settings</button>
-
-    <p id="credits">Credits</p>
+    <button id="settingsIcon">
+        <img class="icon" src="settings25px.png" alt="Settings">
+    </button>
+    <button id="shopIcon">
+        <img class="icon" src="store25px.png" alt="Settings">
+    </button>
 
     <div id="timerBox">
         <div id="selectTimer">
@@ -46,6 +49,20 @@
             <input type="number" id="longBreakLength" placeholder="Enter minutes (whole number)" min="1" value="15"><br>
             <button id="save">Save</button>
             <button id="reset">Reset to Defaults</button>
+        </div>
+    </div>
+
+    <div id="shop" class="hidden">
+        <h2 id="shopHeader">Store</h2>
+        <button id="closeShop">X</button>
+        <h3>Themes</h3>
+        <div id="changeTheme">
+            <button class="colorOptions" id="pink">
+                <img class="locked" src="lock25px.png" alt="Locked">
+            </button>
+            <button class="colorOptions" id="coral">
+                <img class="locked" src="lock25px.png" alt="Locked">
+            </button>
         </div>
     </div>
 

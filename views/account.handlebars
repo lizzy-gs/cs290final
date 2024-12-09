@@ -11,6 +11,9 @@
     <h1 id="title">Pomodoro Study Timer</h1>
     <div id="infoContainer">
         <h2>{{title}}</h2>
+        {{#if error}}
+            <p>{{error}}</p>
+        {{/if}}
         <form method="post">
         <label for="username">Username:</label><br>
 		<input type="text" id="username" name="username"><br>

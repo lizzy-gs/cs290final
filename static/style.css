@@ -65,6 +65,14 @@ input {
     display: none;
 }
 
+.icon {
+
+    width: 30px;
+    height: 30px;
+    display: block;
+    padding: 4px;
+}
+
 #title {
 
     margin: 0;
@@ -78,9 +86,19 @@ input {
 #settingsIcon {
 
     margin: 0;
+    padding: 0;
     position: absolute;
     top: 10px;
     right: 10px;
+}
+
+#shopIcon {
+
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 10px;
+    right: 50px;
 }
 
 #timerBox {
@@ -152,9 +170,37 @@ input {
     padding: 5px;
 }
 
-#credits {
-
+#shop {
+    padding: 15px;
+    width: 50vw;
+    height: 55vh;
     position: absolute;
-    top: 15px;
-    right: 110px;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: white;
+    border-style: none;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+#closeShop {
+
+    margin-top: 5px;
+    margin-right: 0px;
+    padding: 0px;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    border: none;
+}
+
+#shopHeader {
+
+    margin: 0;
+    font-size: 30px;
 }
