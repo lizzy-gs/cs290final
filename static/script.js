@@ -198,15 +198,55 @@ closeShop.addEventListener("click", () => {
   shopModal.classList.toggle("hidden")
 })
 
+function buyTheme(e) {
+  e.stopPropagation();
+  e.preventDefault();
+  const target = e.currentTarget;
+  const themeName = e.currentTarget.dataset.name;
+  const theme = availableThemes.find((el) => el.name == themeName)
+  if (theme != undefined) {
+		changeTheme(themeName);
+		return;
+  }
+
+  fetch("/purchase", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+		theme: themeName,
+    }),
+  }).then(res => {
+    if (!res.ok) {
+        throw new Error('Not enough credits to purchase theme');
+    }
+    return res.json();
+  }).then(theme => {
+	availableThemes.push(theme);
+	changeTheme(themeName);
+	target.removeChild(target.children[2])
+	target.removeChild(target.children[1])
+  }).catch((err)=>{
+	alert(err);
+  })
+}
+
+document.querySelectorAll(".colorOption").forEach((el)=>{
+	el.addEventListener("click", buyTheme)
+})
+
 function changeTheme(name) {
-	const theme = availableThemes.find((el) => el.name = name)
+	const theme = availableThemes.find((el) => el.name == name)
 	if (theme == undefined) {return}
 
+	console.log(theme)
+
 	const root = document.documentElement;
-	root.style.setProperty("--bg-color", theme.bgColor)
-	root.style.setProperty("--primary-color", theme.buttonColor)
-	root.style.setProperty("--accent-color", theme.accentColor)
-	root.style.setProperty("--text-color", theme.textColor)
-	root.style.setProperty("--hover-shadow", theme.hoverShadow)
+	root.style.setProperty("--bg-color", theme.styles.bgColor)
+	root.style.setProperty("--primary-color", theme.styles.buttonColor)
+	root.style.setProperty("--accent-color", theme.styles.accentColor)
+	root.style.setProperty("--text-color", theme.styles.textColor)
+	root.style.setProperty("--hover-shadow", theme.styles.hoverShadow)
 }
 

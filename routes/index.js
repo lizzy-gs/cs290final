@@ -13,7 +13,8 @@ export default [tryLoggedIn, async (req, res) => {
     userThemes = JSON.parse(row.purchases);
   }
 
-  for (let i = 0; i < colorOptions.length; i++) {
+  colorOptions[0].locked = false;
+  for (let i = 1; i < colorOptions.length; i++) {
     colorOptions[i].locked = true;
   }
 

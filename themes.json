@@ -87,7 +87,7 @@
     "name": "Black And White",
     "creditCost": 10,
     "styles": {
-      "storeButtonColor": "d9d9d9",
+      "storeButtonColor": "#d9d9d9",
       "bgColor": "#ffffff",
       "buttonColor": "#d9d9d9",
       "accentColor": "#808080",

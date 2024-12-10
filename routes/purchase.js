@@ -16,7 +16,7 @@ export default [mustLoggedIn, async (req, res) => {
 
   const themes = JSON.parse(await readFile("themes.json"));
 
-  const theme = themes[req.body.theme];
+  const theme = Object.values(themes).find(el=>el.name == req.body.theme);
 
   if (theme.creditCost > credits_available) {
     res.status(400).json({ error: "not enough credits" });
@@ -35,5 +35,5 @@ export default [mustLoggedIn, async (req, res) => {
     username,
   ]);
 
-  res.status(204).end();
+  res.json(theme);
 }];
