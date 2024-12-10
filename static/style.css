@@ -234,3 +234,15 @@ input {
     font-size: 10px;
     margin: 0px;
 }
+
+.optionName {
+    font-size: 10px;
+    margin: 0px;
+}
+
+#credits {
+
+    position: absolute;
+    top: 0px;
+    left: 20px;
+}

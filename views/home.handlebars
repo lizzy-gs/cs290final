@@ -56,11 +56,13 @@
 
     <div id="shop" class="hidden">
         <h2 id="shopHeader">Store</h2>
+        <h3 id="credits">Credits</h3>
         <button id="closeShop">X</button>
         <h3>Themes</h3>
         <div id="changeTheme">
             {{#each colorOptions}}
                 <button class="colorOption" style="background: {{styles.storeButtonColor}}">
+                    <p class="optionName">{{name}}</p>
                 {{#if locked}}
                     <img class="locked" src="lock25px.png" alt="Locked">
                     <p class="cost">{{creditCost}}</p>

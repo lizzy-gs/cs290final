@@ -143,10 +143,11 @@ function resetToDefaults() {
 function setCredits() {
   var credits = totalStudied / 60;
   credits = credits - creditsSpent;
-  document.getElementById("credits").innerText = credits;
+  document.getElementById("credits").innerText = "$" + credits;
 }
 
 setTimer(pomodoroLength);
+setCredits();
 
 let start = document.querySelector("#startTimer");
 let pomodoro = document.querySelector("#pomodoro");
