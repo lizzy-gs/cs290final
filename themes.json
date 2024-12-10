@@ -15,121 +15,132 @@
     "name": "Pink",
     "creditCost": 10,
     "styles": {
-      "bgColor": "#ff91c1",
-      "buttonColor": "#ffc1c1",
-      "accentColor": "#ffb6b9",
-      "textColor": "#4a4a4a",
-      "hoverShadow": "rgba(255, 180, 185, 0.5)"
+      "storeButtonColor": "#ff91c1",
+      "bgColor": "#ffe6f0",
+      "buttonColor": "#ff91c1",
+      "accentColor": "#ff6fa1",
+      "textColor": "#a64270",
+      "hoverShadow": "rgba(255, 110, 160, 0.5)"
     }
   },
   "coral": {
     "name": "Coral",
     "creditCost": 10,
     "styles": {
-      "bgColor": "#ff91c1",
-      "buttonColor": "#ffc1c1",
-      "accentColor": "#ffb6b9",
-      "textColor": "#4a4a4a",
-      "hoverShadow": "rgba(255, 180, 185, 0.5)"
+      "storeButtonColor": "#ffc8a3",
+      "bgColor": "#fbeae6",
+      "buttonColor": "#ffc8a3",
+      "accentColor": "#ff9b90",
+      "textColor": "#5a2f2a",
+      "hoverShadow": "rgba(255, 155, 145, 0.5)"
     }
   },
-  "Yellow": {
+  "yellow": {
     "name": "Yellow",
     "creditCost": 10,
     "styles": {
-      "bgColor": "#ffe8a3",
-      "buttonColor": "#ffc1c1",
-      "accentColor": "#ffb6b9",
-      "textColor": "#4a4a4a",
-      "hoverShadow": "rgba(255, 180, 185, 0.5)"
+      "storeButtonColor": "#ffe8a3",
+      "bgColor": "#fcf9e6",
+      "buttonColor": "#ffe8a3",
+      "accentColor": "#ffd490",
+      "textColor": "#5a542a",
+      "hoverShadow": "rgba(255, 210, 145, 0.5)"
     }
   },
-  "Green": {
+  "green": {
     "name": "Green",
     "creditCost": 10,
     "styles": {
-      "bgColor": "#b1ffca",
-      "buttonColor": "#ffc1c1",
-      "accentColor": "#ffb6b9",
-      "textColor": "#4a4a4a",
-      "hoverShadow": "rgba(255, 180, 185, 0.5)"
+      "storeButtonColor": "#b1ffca",
+      "bgColor": "#eef8f1",
+      "buttonColor": "#b1ffca",
+      "accentColor": "#90ffb6",
+      "textColor": "#2f4a36",
+      "hoverShadow": "rgba(145, 255, 180, 0.5)"
     }
   },
-  "Blue": {
+  "blue": {
     "name": "Blue",
     "creditCost": 10,
     "styles": {
+      "storeButtonColor": "#a3d9ff",
       "bgColor": "#e6f4fc",
       "buttonColor": "#a3d9ff",
       "accentColor": "#90c8ff",
       "textColor": "#2a3b5a",
-      "hoverShadow": "rgba(0, 100, 255, 0.5)"
+      "hoverShadow": "rgba(145, 200, 255, 0.5)"
     }
   },
-  "Purple": {
+  "purple": {
     "name": "Purple",
     "creditCost": 10,
     "styles": {
-      "bgColor": "#d1a3ff",
-      "buttonColor": "#ffc1c1",
-      "accentColor": "#ffb6b9",
-      "textColor": "#4a4a4a",
-      "hoverShadow": "rgba(255, 180, 185, 0.5)"
+      "storeButtonColor": "#d1a3ff",
+      "bgColor": "#f3e6f9",
+      "buttonColor": "#d1a3ff",
+      "accentColor": "#c090ff",
+      "textColor": "#4a306b",
+      "hoverShadow": "rgba(190, 145, 255, 0.5)"
     }
   },
-  "BlackAndWhite": {
+  "blackAndWhite": {
     "name": "Black And White",
     "creditCost": 10,
     "styles": {
-      "bgColor": "#d9d9d9",
-      "buttonColor": "#ffc1c1",
-      "accentColor": "#ffb6b9",
-      "textColor": "#4a4a4a",
-      "hoverShadow": "rgba(255, 180, 185, 0.5)"
+      "storeButtonColor": "d9d9d9",
+      "bgColor": "#ffffff",
+      "buttonColor": "#d9d9d9",
+      "accentColor": "#808080",
+      "textColor": "#000000",
+      "hoverShadow": "rgba(125, 125, 125, 0.5)"
     }
   },
-  "Sunset": {
+  "sunset": {
     "name": "Sunset",
-    "creditCost": 10,
+    "creditCost": 20,
     "styles": {
-      "bgColor": "linear-gradient(to top, #f8b988, #eb8d88, #c26989, #695d8c)",
-      "buttonColor": "#ffc1c1",
-      "accentColor": "#ffb6b9",
-      "textColor": "#4a4a4a",
-      "hoverShadow": "rgba(255, 180, 185, 0.5)"
+      "storeButtonColor": "linear-gradient(135deg, #ffe8d6 0%, #ff9563 40%, #ff7043 75%, #5a2a4a 100%)",
+      "bgColor": "#ffe8d6",
+      "buttonColor": "#ff9563",
+      "accentColor": "#ff7043",
+      "textColor": "#5a2a4a",
+      "hoverShadow": "rgba(255, 110, 65, 0.5)"
     }
   },
-  "Candy": {
+  "candy": {
     "name": "Candy",
-    "creditCost": 10,
+    "creditCost": 20,
     "styles": {
-      "bgColor": "linear-gradient(to top, #d9f1f3, #fcf0dc, #fbdee2, #feafab)",
-      "buttonColor": "#ffc1c1",
-      "accentColor": "#ffb6b9",
-      "textColor": "#4a4a4a",
-      "hoverShadow": "rgba(255, 180, 185, 0.5)"
+      "storeButtonColor": "linear-gradient(135deg, #ffa8e8 0%, #a8e8ff 50%, #fef6ff 100%)",
+      "bgColor": "#fef6ff",
+      "buttonColor": "#ffa8e8",
+      "accentColor": "#a8e8ff",
+      "textColor": "#b38ad6",
+      "hoverShadow": "rgba(165, 230, 255, 0.5)"
     }
   },
   "Space": {
     "name": "Space",
-    "creditCost": 10,
+    "creditCost": 20,
     "styles": {
-      "bgColor": "linear-gradient(to top, #a3ffd6, #7bc9ff, #8576ff, #1c1678)",
-      "buttonColor": "#ffc1c1",
-      "accentColor": "#ffb6b9",
-      "textColor": "#4a4a4a",
-      "hoverShadow": "rgba(255, 180, 185, 0.5)"
+      "storeButtonColor": "linear-gradient(135deg, #0b0f2a 0%, #3c44b1 50%, #6a0dad 100%)",
+      "bgColor": "#0b0f2a",
+      "buttonColor": "#6a0dad",
+      "accentColor": "#3c44b1",
+      "textColor": "#cfd2d9",
+      "hoverShadow": "rgba(60, 70, 175, 0.5)"
     }
   },
-  "Tropical": {
-    "name": "Tropical",
-    "creditCost": 10,
+  "beach": {
+    "name": "Beach",
+    "creditCost": 20,
     "styles": {
-      "bgColor": "linear-gradient(to top, #8ee2a7, #ffc94a, #ff6699, #5a3a2a)",
-      "buttonColor": "#ffc1c1",
-      "accentColor": "#ffb6b9",
-      "textColor": "#4a4a4a",
-      "hoverShadow": "rgba(255, 180, 185, 0.5)"
+      "storeButtonColor": "linear-gradient(135deg, #f7e9d7 0%, #5bc0eb 50%, #f18f01 100%)",
+      "bgColor": "#f7e9d7",
+      "buttonColor": "#5bc0eb",
+      "accentColor": "#f18f01",
+      "textColor": "#705548",
+      "hoverShadow": "rgba(240, 140, 0, 0.5)"
     }
   }
 }
