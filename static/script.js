@@ -65,6 +65,7 @@ function countdownTimer() {
         clearInterval(interval);
         document.getElementById("startTimer").innerText = "Start Timer";
         syncWithServer();
+		setCredits();
         alert("Time's up!");
       }
     }, 1000);
