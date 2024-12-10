@@ -2,11 +2,11 @@ body {
 
     margin: 0;
     padding: 0;
-    background-color: #f8f1f1;
+    background-color: var(--bg-color);
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #4a4a4a;
+    color: var(--text-color);
     font-family: "Patrick Hand SC", cursive;
     font-weight: 400;
     font-style: normal;
@@ -23,11 +23,11 @@ ul {
 button {
 
     padding: 10px;
-    background-color: #ffc1c1;
+    background-color: var(--primary-color);
     border-style: none;
     border-radius: 5px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    color: #4a4a4a;
+    color: var(--text-color);
     font-family: "Patrick Hand SC", cursive;
     font-weight: 400;
     font-style: normal;
@@ -71,7 +71,7 @@ button {
 
 
 .taskItem {
-    background: #ffe5e5;
+    background: color-mix(in hsl shorter hue, var(--primary-color) 100%, #FFFFFF 70%);
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 10px;
@@ -104,8 +104,8 @@ button {
 
 button:hover {
     cursor: pointer;
-    background-color: #ffb6b9;
-    box-shadow: 0px 4px 6px rgba(255, 180, 185, 0.5);
+    background-color: var(--primary-color);
+    box-shadow: 0px 4px 6px var(--hover-shadow);
     transform: translateY(-1px);
     transition: all 0.2s ease;
 }
@@ -135,7 +135,7 @@ button:hover {
     right: 15px;
     font-size: 25px;
     border: none;
-    background-color: gainsboro;
+    background-color: var(--primary-color);
 }
 
 #taskForm {
@@ -165,15 +165,16 @@ button:hover {
 }
 
 #taskForm button {
-    background-color: #ffc1c1;
-    color: #4a4a4a;
+    background-color: var(--primary-color);
+    color: var(--text-color);
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 #taskForm button:hover {
-    background-color: #ffb6b9;
+    background-color: var(--primary-color);
+    box-shadow: 0px 4px 6px var(--hover-shadow);
 }
 
 .button-container {

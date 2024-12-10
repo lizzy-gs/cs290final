@@ -27,6 +27,7 @@ fetch("/me").then((res) => {
   creditsSpent = credits_spent;
   availableThemes = purchases;
   setTimer(pomodoroLength);
+  setCredits();
 }).catch(() => {
   loginWarning.style.display = "block";
   loggedIn = false;
@@ -47,6 +48,7 @@ function syncWithServer() {
     }),
   });
 }
+
 
 function countdownTimer() {
   if (interval) {
@@ -141,6 +143,7 @@ function resetToDefaults() {
   document.getElementById("pomodoroLength").value = pomodoroLength / 60;
   document.getElementById("shortBreakLength").value = shortLength / 60;
   document.getElementById("longBreakLength").value = longLength / 60;
+  syncWithServer();
 }
 
 function setCredits() {
@@ -150,7 +153,6 @@ function setCredits() {
 }
 
 setTimer(pomodoroLength);
-setCredits();
 
 let start = document.querySelector("#startTimer");
 let pomodoro = document.querySelector("#pomodoro");
@@ -248,5 +250,15 @@ function changeTheme(name) {
 	root.style.setProperty("--accent-color", theme.styles.accentColor)
 	root.style.setProperty("--text-color", theme.styles.textColor)
 	root.style.setProperty("--hover-shadow", theme.styles.hoverShadow)
+
+	fetch("/set_theme", {
+	  method: "POST",
+	  headers: {
+	    "Content-Type": "application/json",
+	  },
+	  body: JSON.stringify({
+	  theme: name,
+	}),
+  })
 }
 

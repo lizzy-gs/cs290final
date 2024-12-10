@@ -45,7 +45,7 @@ export const registerUser = async (db, username, password) => {
   try {
     const hashedPassword = await argon2.hash(password);
     const insert = db.prepare(
-      "INSERT INTO users (username, password, sec_studied, pomodoro_length, short_break_length, long_break_length, credits_spent, todos, purchases) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",
+      "INSERT INTO users (username, password, sec_studied, pomodoro_length, short_break_length, long_break_length, credits_spent, todos, purchases, current_theme) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
     )
       .run([
         username,
@@ -57,6 +57,7 @@ export const registerUser = async (db, username, password) => {
         0,
         "[]",
         JSON.stringify([defaultTheme]),
+		"red",
       ]);
 
     return { success: true, id: insert.lastID };

@@ -7,10 +7,12 @@ export default [tryLoggedIn, async (req, res) => {
 
   let loggedIn = req.user != undefined;
   let userThemes = [];
+  let current_theme = "red";
   if (loggedIn) {
-    const row = req.db.prepare("SELECT purchases FROM users WHERE username = ?")
+    const row = req.db.prepare("SELECT purchases, current_theme FROM users WHERE username = ?")
       .get(req.user.username);
     userThemes = JSON.parse(row.purchases);
+    current_theme = row && row.current_theme ? row.current_theme : "red";
   }
 
   colorOptions[0].locked = false;
@@ -26,7 +28,9 @@ export default [tryLoggedIn, async (req, res) => {
 	}
   });
 
+
   res.render("home", {
     colorOptions: colorOptions,
+	theme: themes[current_theme],
   });
 }];

@@ -13,6 +13,7 @@ function initDB() {
 	  pomodoro_length INTEGER,
 	  short_break_length INTEGER,
 	  long_break_length INTEGER,
+	  current_theme TEXT,
 	  todos TEXT,
 	  purchases TEXT
     )
