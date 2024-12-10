@@ -20,7 +20,7 @@ export const post = [mustLoggedIn, (req, res) => {
   req.db.prepare(
     "UPDATE users SET todos = ? WHERE username = ?",
   ).run(
-    req.body.todos,
+    JSON.stringify(req.body.todos),
     username,
   );
 
