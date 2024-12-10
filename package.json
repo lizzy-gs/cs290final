@@ -34,6 +34,7 @@
     "jsonwebtoken": "^9.0.2"
   },
   "devDependencies": {
+    "@flydotio/dockerfile": "^0.5.9",
     "concurrently": "^9.1.0",
     "nodemon": "^3.1.7"
   }
