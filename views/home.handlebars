@@ -35,25 +35,29 @@
 		</button>
 	</div>
 
-    <div id="timerBox">
-        <div id="selectTimer">
-            <button id="pomodoro" class="timerOption">Pomodoro</button>
-            <button id="shortBreak" class="timerOption">Short Break</button>
-            <button id="longBreak" class="timerOption">Long Break</button>
-        </div>
-        <h2 id="timer">10:00</h2>
-        <button id="startTimer">Start Timer</button>
-    </div>
+	<div class="col">
 
-    <!-- THIS IS THE TASKS IMPLEMENTATION -->
-    {{!-- Had to move so it wasn't shown when settings popped up --}}
-    <div id="taskSection">
-        <h2>Manage Tasks</h2>
-        <p>Track your tasks to maximize productivity.</p>
-        <a href="/tasks" id="taskPageLink">
-            <button>Go to Task List</button>
-        </a>
-    </div>
+		<div id="timerBox">
+    	    <div id="selectTimer">
+    	        <button id="pomodoro" class="timerOption">Pomodoro</button>
+    	        <button id="shortBreak" class="timerOption">Short Break</button>
+    	        <button id="longBreak" class="timerOption">Long Break</button>
+    	    </div>
+    	    <h2 id="timer">10:00</h2>
+    	    <button id="startTimer">Start Timer</button>
+    	</div>
+
+    	<!-- THIS IS THE TASKS IMPLEMENTATION -->
+    	{{!-- Had to move so it wasn't shown when settings popped up --}}
+    	<div id="taskSection">
+    	    <h2>Manage Tasks</h2>
+    	    <p>Track your tasks to maximize productivity.</p>
+    	    <a href="/tasks" id="taskPageLink">
+    	        <button>Go to Task List</button>
+    	    </a>
+    	</div>
+
+	</div>
 
     <div id="settingsMenu" class="hidden">
         <h2 id="settingsHeader">Settings</h2>
