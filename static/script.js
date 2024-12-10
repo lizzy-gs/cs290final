@@ -54,6 +54,7 @@ function countdownTimer() {
   if (interval) {
     stopInterval();
     syncWithServer();
+	setCredits();
   } else {
     document.getElementById("startTimer").innerText = "Pause Timer";
     interval = setInterval(() => {
