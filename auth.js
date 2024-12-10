@@ -1,8 +1,26 @@
 import process from "node:process";
 import argon2 from "argon2";
 import jwt from "jsonwebtoken";
+import { readFile } from "node:fs/promises";
 
 const JWT_SECRET = process.env.JWT_SECRET || "jwt_secret";
+
+export const tryLoggedIn = (req, res, next) => {
+  const token = req.cookies.session;
+
+  if (!token) {
+	next();
+	return;
+  }
+  try {
+    const verified = jwt.verify(token, JWT_SECRET);
+    req.user = verified;
+    next();
+  } catch (_err) {
+    res.clearCookie("session");
+    res.status(403).json({ error: "Invalid session. Please log in again." });
+  }
+}
 
 export const mustLoggedIn = (req, res, next) => {
   const token = req.cookies.session;
@@ -22,6 +40,8 @@ export const mustLoggedIn = (req, res, next) => {
 };
 
 export const registerUser = async (db, username, password) => {
+
+  let defaultTheme = JSON.parse(await readFile("themes.json"))["red"];
   try {
     const hashedPassword = await argon2.hash(password);
     const insert = db.prepare(
@@ -36,7 +56,7 @@ export const registerUser = async (db, username, password) => {
         900,
         0,
         "[]",
-        "[]",
+        JSON.stringify([defaultTheme]),
       ]);
 
     return { success: true, id: insert.lastID };

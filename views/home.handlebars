@@ -61,8 +61,18 @@
         <h3>Themes</h3>
         <div id="changeTheme">
             {{#each colorOptions}}
-                <button class="colorOption" style="background: {{styles.storeButtonColor}}">
-                    <p class="optionName">{{name}}</p>
+                <button
+					class="colorOption"
+					style="background: {{styles.storeButtonColor}}"
+					data-buttonColor="{{styles.buttonColor}}"
+					data-bgColor="{{styles.bgColor}}"
+					data-accentColor="{{styles.accentColor}}"
+					data-textColor="{{styles.textColor}}"
+					data-hoverShadow="{{styles.hoverShadow}}"
+					data-locked="{{locked}}"
+					data-name="{{name}}"
+				>
+                <p class="optionName">{{name}}</p>
                 {{#if locked}}
                     <img class="locked" src="lock25px.png" alt="Locked">
                     <p class="cost">{{creditCost}}</p>
@@ -80,3 +90,4 @@
     <script src="script.js"></script>
     
 </body>
+</html>

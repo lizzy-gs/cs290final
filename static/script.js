@@ -5,6 +5,7 @@ let longLength = 900;
 let totalStudied = 0;
 let creditsSpent = 0;
 let loggedIn = false;
+let availableThemes = [];
 
 fetch("/me").then((res) => {
   if (!res.ok) throw new Error(`Response status: ${response.status}`);
@@ -16,6 +17,7 @@ fetch("/me").then((res) => {
     short_break_length,
     long_break_length,
     credits_spent,
+	purchases
   } = data;
   loggedIn = true;
   shortLength = short_break_length;
@@ -23,6 +25,7 @@ fetch("/me").then((res) => {
   pomodoroLength = pomodoro_length;
   totalStudied = sec_studied;
   creditsSpent = credits_spent;
+  availableThemes = purchases;
   setTimer(pomodoroLength);
 }).catch(() => {
   loginWarning.style.display = "block";
@@ -195,5 +198,15 @@ closeShop.addEventListener("click", () => {
   shopModal.classList.toggle("hidden")
 })
 
-function changeTheme() {
+function changeTheme(name) {
+	const theme = availableThemes.find((el) => el.name = name)
+	if (theme == undefined) {return}
+
+	const root = document.documentElement;
+	root.style.setProperty("--bg-color", theme.bgColor)
+	root.style.setProperty("--primary-color", theme.buttonColor)
+	root.style.setProperty("--accent-color", theme.accentColor)
+	root.style.setProperty("--text-color", theme.textColor)
+	root.style.setProperty("--hover-shadow", theme.hoverShadow)
 }
+
