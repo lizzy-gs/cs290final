@@ -1,0 +1,40 @@
+
+<!-- Adjust so it's theme button -->
+<button id="change-theme-button">
+
+    <img class="icon" src="paint_brush.png" id="brush-icon" alt="Settings">
+</button>
+
+
+<!-- MENU themes -->
+<div id="change-theme-modal" class="hidden">
+    <h3>Theme Setting</h3>
+    <button type="button" id="modal-close" class="modal-hide-button">&times;</button>
+   
+    <div class="modal-dialog">
+        <fieldset id="theme-condition-fieldset" class="theme-fieldset">
+            <legend>Theme</legend>
+            {{#each style_array}}
+                {{>theme_element_menu}}
+            {{/each}}
+            <!--My choice-->
+            <div class="input-group">
+                <input type="radio" name="theme-condition" id="thee-condition-mychoice" value="mychoice">
+                <label for="theme-condition-mychoice">New Theme</label>
+                <!-- New line -->
+                <div class="newname-container">
+                    Name: <input type="text" id="name_new" placeholder="Name" enabled>
+                </div>
+                <div class="newhex-container">
+                    Hex Color:<input type="text" id="hex_value_new" placeholder="Hex Value" enabled>
+                </div>
+            </div>
+        </fieldset>
+
+        <div class="modal-footer">
+            <button type="button" id="modal-cancel" class="modal-hide-button action-button">Cancel</button>
+            <button type="button" id="modal-apply" class="action-button">Apply</button>
+        </div>
+
+    </div>
+</div>

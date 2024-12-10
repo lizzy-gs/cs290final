@@ -1,0 +1,26 @@
+button {
+
+    padding: 10px;
+    background-color: #666667;
+    border-style: none;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    color: #ffffff;
+    font-family: "Patrick Hand SC", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+}
+
+button:hover {
+
+    cursor: pointer;
+    background-color: #666667;
+    box-shadow: 0px 5px 10px rgba(255, 182, 185, 0.5);
+    transform: translateY(-1px);
+    transition: all 0.2s ease;
+}
+
+.brush-icon{
+    color: #ffffff;
+}
