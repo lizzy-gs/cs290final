@@ -37,6 +37,15 @@
         <button id="startTimer">Start Timer</button>
     </div>
 
+    <!-- THIS IS THE TASKS IMPLEMENTATION -->
+    {{!-- Had to move so it wasn't shown when settings popped up --}}
+    <div id="taskSection">
+        <h2>Manage Tasks</h2>
+        <p>Track your tasks to maximize productivity.</p>
+        <a href="/tasks" id="taskPageLink">
+            <button>Go to Task List</button>
+        </a>
+    </div>
 
     <div id="settingsMenu" class="hidden">
         <h2 id="settingsHeader">Settings</h2>
@@ -86,15 +95,6 @@
 		<h2>Warning!</h2>
 		<p>You are not <a href="/login">logged in</a>. Any progress will be lost.</p>
 	</div>
-
-    <!-- THIS IS THE TASKS IMPLEMENTATION -->
-    <div id="taskSection">
-        <h2>Manage Tasks</h2>
-        <p>Track your tasks to maximize productivity.</p>
-        <a href="/tasks" id="taskPageLink">
-            <button>Go to Task List</button>
-        </a>
-    </div>
 
     <script src="script.js"></script>
     
