@@ -149,7 +149,7 @@ function resetToDefaults() {
 function setCredits() {
   var credits = totalStudied / 60;
   credits = credits - creditsSpent;
-  document.getElementById("credits").innerText = "$" + credits;
+  document.getElementById("credits").innerText = "$" + credits.toFixed(2);
 }
 
 setTimer(pomodoroLength);
@@ -229,6 +229,8 @@ function buyTheme(e) {
 	changeTheme(themeName);
 	target.removeChild(target.children[2])
 	target.removeChild(target.children[1])
+	creditsSpent += theme.creditCost
+	setCredits();
   }).catch((err)=>{
 	alert(err);
   })
