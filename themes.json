@@ -1,7 +1,7 @@
 {
-  "Default Pink": {
-    "name": "Default Pink",
-    "creditCost": 4,
+  "Default Red": {
+    "name": "Default Red",
+    "creditCost": 10,
     "styles": {
       "bg-color": "#f8f1f1",
       "primary-color": "#ffc1c1",
@@ -10,11 +10,110 @@
       "hover-shadow": "rgba(255, 180, 185, 0.5)"
     }
   },
-  "Orange": {
-    "name": "Orange",
-    "creditCost": 1,
+  "Pink": {
+    "name": "Pink",
+    "creditCost": 10,
     "styles": {
-      "bg-color": "#f8f1f1",
+      "bg-color": "#ff91c1",
+      "primary-color": "#ffc1c1",
+      "accent-color": "#ffb6b9",
+      "text-color": "#4a4a4a",
+      "hover-shadow": "rgba(255, 180, 185, 0.5)"
+    }
+  },
+  "Yellow": {
+    "name": "Yellow",
+    "creditCost": 10,
+    "styles": {
+      "bg-color": "#ffe8a3",
+      "primary-color": "#ffc1c1",
+      "accent-color": "#ffb6b9",
+      "text-color": "#4a4a4a",
+      "hover-shadow": "rgba(255, 180, 185, 0.5)"
+    }
+  },
+  "Green": {
+    "name": "Green",
+    "creditCost": 10,
+    "styles": {
+      "bg-color": "#b1ffca",
+      "primary-color": "#ffc1c1",
+      "accent-color": "#ffb6b9",
+      "text-color": "#4a4a4a",
+      "hover-shadow": "rgba(255, 180, 185, 0.5)"
+    }
+  },
+  "Blue": {
+    "name": "Blue",
+    "creditCost": 10,
+    "styles": {
+      "bg-color": "#a3d9ff",
+      "primary-color": "#ffc1c1",
+      "accent-color": "#ffb6b9",
+      "text-color": "#4a4a4a",
+      "hover-shadow": "rgba(255, 180, 185, 0.5)"
+    }
+  },
+  "Purple": {
+    "name": "Purple",
+    "creditCost": 10,
+    "styles": {
+      "bg-color": "#d1a3ff",
+      "primary-color": "#ffc1c1",
+      "accent-color": "#ffb6b9",
+      "text-color": "#4a4a4a",
+      "hover-shadow": "rgba(255, 180, 185, 0.5)"
+    }
+  },
+  "BlackAndWhite": {
+    "name": "Black And White",
+    "creditCost": 10,
+    "styles": {
+      "bg-color": "#d9d9d9",
+      "primary-color": "#ffc1c1",
+      "accent-color": "#ffb6b9",
+      "text-color": "#4a4a4a",
+      "hover-shadow": "rgba(255, 180, 185, 0.5)"
+    }
+  },
+  "Sunset": {
+    "name": "Sunset",
+    "creditCost": 10,
+    "styles": {
+      "bg-color": "linear-gradient(to top, #f8b988, #eb8d88, #c26989, #695d8c)",
+      "primary-color": "#ffc1c1",
+      "accent-color": "#ffb6b9",
+      "text-color": "#4a4a4a",
+      "hover-shadow": "rgba(255, 180, 185, 0.5)"
+    }
+  },
+  "Candy": {
+    "name": "Candy",
+    "creditCost": 10,
+    "styles": {
+      "bg-color": "linear-gradient(to top, #d9f1f3, #fcf0dc, #fbdee2, #feafab)",
+      "primary-color": "#ffc1c1",
+      "accent-color": "#ffb6b9",
+      "text-color": "#4a4a4a",
+      "hover-shadow": "rgba(255, 180, 185, 0.5)"
+    }
+  },
+  "Space": {
+    "name": "Space",
+    "creditCost": 10,
+    "styles": {
+      "bg-color": "linear-gradient(to top, #a3ffd6, #7bc9ff, #8576ff, #1c1678)",
+      "primary-color": "#ffc1c1",
+      "accent-color": "#ffb6b9",
+      "text-color": "#4a4a4a",
+      "hover-shadow": "rgba(255, 180, 185, 0.5)"
+    }
+  },
+  "Tropical": {
+    "name": "Tropical",
+    "creditCost": 10,
+    "styles": {
+      "bg-color": "linear-gradient(to top, #8ee2a7, #ffc94a, #ff6699, #5a3a2a)",
       "primary-color": "#ffc1c1",
       "accent-color": "#ffb6b9",
       "text-color": "#4a4a4a",
