@@ -140,7 +140,7 @@ input {
 #loginWarning h2 {
     padding: 0;
     margin: 0;
-    color: orange;
+    color: var(--accent-color);
 }
 
 #settingsMenu {

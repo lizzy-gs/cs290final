@@ -194,4 +194,5 @@ closeShop.addEventListener("click", () => {
   shopModal.classList.toggle("hidden")
 })
 
-function changeTheme() {}
+function changeTheme() {
+}
