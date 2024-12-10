@@ -18,11 +18,11 @@ export const post = [mustLoggedIn, (req, res) => {
   const username = req.user.username;
 
   req.db.prepare(
-    "UPDATE users SET todos = ? WHERE username = ?",
+      "UPDATE users SET todos = ? WHERE username = ?",
   ).run(
-    JSON.stringify(req.body.todos),
-    username,
+      JSON.stringify(req.body.todos),
+      username,
   );
 
-  res.status(204);
+  res.status(204).send();
 }];

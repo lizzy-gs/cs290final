@@ -1,0 +1,202 @@
+body {
+
+    margin: 0;
+    padding: 0;
+    background-color: #f8f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #4a4a4a;
+    font-family: "Patrick Hand SC", cursive;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; 
+}
+
+
+button {
+
+    padding: 10px;
+    background-color: #ffc1c1;
+    border-style: none;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    color: #4a4a4a;
+    font-family: "Patrick Hand SC", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+}
+
+#title {
+
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 2px;
+    left: 10px;
+    font-size: 40px;
+}
+
+/* General Page Layout */
+.pageContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.sectionHeader {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#taskList {
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically (if needed) */
+    width: 100%; /* Ensure the container spans full width */
+    max-width: 600px; /* Limit the width of the container */
+    margin: 0 auto; /* Center the container horizontally within its parent */
+    gap: 20px; /* Add space between the items */
+}
+
+
+.taskItem {
+    background: #ffe5e5;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: left;
+    font-size: 1.2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.taskText {
+    display: block;
+}
+
+#taskPage {
+    text-align: center;
+}
+
+/* No Tasks Message */
+.noTasks {
+    font-size: 1rem;
+    color: #777;
+    text-align: center;
+}
+
+/* Button Container */
+.buttonContainer {
+    position:fixed;
+    bottom:20px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #ffb6b9;
+    box-shadow: 0px 4px 6px rgba(255, 180, 185, 0.5);
+    transform: translateY(-1px);
+    transition: all 0.2s ease;
+}
+
+#taskFormContainer {
+    padding: 15px;
+    width: 50vw;
+    height: auto;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: white;
+    border: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#taskFormContainer.hidden {
+    display: none;
+}
+
+#closeTaskForm {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 25px;
+    border: none;
+    background-color: gainsboro;
+}
+
+#taskForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    width: 100%; 
+    padding: 20px;
+}
+
+#taskForm input,
+#taskForm textarea,
+#taskForm button {
+    width: 90%;
+    max-width: 400px; 
+    padding: 10px;
+    margin: 5px 0; 
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#taskForm textarea {
+    resize: vertical; 
+}
+
+#taskForm button {
+    background-color: #ffc1c1;
+    color: #4a4a4a;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#taskForm button:hover {
+    background-color: #ffb6b9;
+}
+
+.button-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px; 
+    justify-self: center;
+}
+
+.edit-button {
+    padding: 5px 10px;
+    cursor: pointer; 
+    margin-right: 5px;
+}
+.delete-button {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#addTaskButton {
+    display: block;
+    padding: 10px 20px;
+    margin: 20px;
+    text-align: center; 
+    justify-self: center;
+}

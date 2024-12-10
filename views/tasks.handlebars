@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pomodoro {{title}}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Jua&family=Patrick+Hand+SC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styleTasks.css">
+</head>
+<body>
+    <h1 id="title">Pomodoro Study Timer</h1>
+    <!-- Tasks Section -->
+    <div id="tasksPage">
+        <h2>Your Tasks</h2>
+        <ul id="taskList">
+            {{#each tasks}}
+            <li class="taskItem">
+                <div class="taskContainer">
+                    <h3 class="taskName">{{name}}</h3>
+                    <p class="taskDesc">{{desc}}</p>
+                    <small class="taskDue">Due: {{#if due}}{{due}}{{else}}No due date{{/if}}</small>
+                    <button class="editButton" data-index="{{@index}}">Edit</button>
+                    <button class="deleteButton" data-index="{{@index}}">Delete</button>
+                </div>
+            </li>
+            {{/each}}
+        </ul>
+        <button id="addTaskButton">Add a Task</button>
+    </div>
+
+    <!-- Task Form (Hidden Initially) -->
+    <div id="taskFormContainer" class="hidden">
+        <h2>Add a Task</h2>
+        <button id="closeTaskForm">X</button>
+        <form id="taskForm">
+            <input type="text" id="taskName" placeholder="Task Name" required>
+            <textarea id="taskDesc" placeholder="Task Description"></textarea>
+            <input type="date" id="taskDue">
+            <button type="submit">Save Task</button>
+        </form>
+    </div>
+
+    <!-- Back to Home Button -->
+    <div class="buttonContainer">
+        <a href="/">
+            <button>Back to Home</button>
+        </a>
+    </div>
+
+    <script src="tasksPage.js"></script>
+</body>
+</html>
